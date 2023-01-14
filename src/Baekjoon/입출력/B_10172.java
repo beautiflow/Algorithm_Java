@@ -1,4 +1,4 @@
-package Baekjoon.Input_Output;
+package Baekjoon.입출력;
 
 public class B_10172 {
     public static void main(String[] args) {
