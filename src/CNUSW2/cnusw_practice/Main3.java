@@ -1,4 +1,4 @@
-package cnusw_practice;
+package CNUSW2.cnusw_practice;
 
 import java.io.IOException;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package cnusw_practice;
+package CNUSW2.cnusw_practice;
 //import java.util.Stack;
 //import java.util.Scanner;
 //import java.io.IOException;
