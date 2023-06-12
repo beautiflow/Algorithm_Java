@@ -21,24 +21,24 @@ public class B_17413{
                 in = true;
 
                 while (!stack.isEmpty()){
-                    System.out.print(stack.pop());
+                    System.out.print(stack.pop()+"1");
                 }
-                System.out.print(str.charAt(i));
+                System.out.print(str.charAt(i)+"2");
             }
             else if(str.charAt(i) == '>'){
                 in = false;
-                System.out.print(str.charAt(i));
+                System.out.print(str.charAt(i)+"3");
             }
 
             else if(in){
-                System.out.print(str.charAt(i));
+                System.out.print(str.charAt(i)+"4");
             }
             else if(!in){
                 if(str.charAt(i) == ' '){
                     while (!stack.isEmpty()){
-                        System.out.print(stack.pop());
+                        System.out.print(stack.pop()+"5");
                     }
-                    System.out.print(str.charAt(i));
+                    System.out.print(str.charAt(i)+"6");
                 }
                 else {
                     stack.push(str.charAt(i));
@@ -46,7 +46,7 @@ public class B_17413{
             }
         }
         while (!stack.isEmpty()){
-            System.out.print(stack.pop());
+            System.out.print(stack.pop()+"7");
         }
 
     }
