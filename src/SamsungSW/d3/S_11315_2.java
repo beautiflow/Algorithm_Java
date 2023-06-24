@@ -61,6 +61,7 @@ public class S_11315_2 {
         }
         return cnt;
     }
+}
 
 //    static char[][] map;
 //    static int[] dx = {-1, -1, 0, 1, 1, 1, 0, -1};
@@ -114,5 +115,5 @@ public class S_11315_2 {
 //            }
 //        }
 //    }
-}
+
 

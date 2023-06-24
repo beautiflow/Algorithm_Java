@@ -25,7 +25,7 @@ public class B_1952 {
 
         for (int i = 1; i <= M * N; i++) {
             snail[x][y] = i;
-            if (x + dx[move] >= M || x + dy[move] < 0 || y + dy[move] >= N || y + dy[move] < 0 || snail[x + dx[move]][y + dy[move]] != 0) {
+            if (x + dx[move] >= M || x + dx[move] < 0 || y + dy[move] >= N || y + dy[move] < 0 || snail[x + dx[move]][y + dy[move]] != 0) {
                 move = (move + 1) % 4;
                 count++;
             }

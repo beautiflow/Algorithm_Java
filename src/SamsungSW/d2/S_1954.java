@@ -22,7 +22,7 @@ public class  S_1954 {
             int c = 0; // 시작 좌표
             for(int i = 1; i <= N*N; i++){
                 nums[r][c] = i;
-                if(r + dx[move] >= N || r + dy[move] < 0 || c + dy[move] >= N || c + dy[move] < 0 || nums[r + dx[move]][c + dy[move]] != 0){
+                if(r + dx[move] >= N || r + dx[move] < 0 || c + dy[move] >= N || c + dy[move] < 0 || nums[r + dx[move]][c + dy[move]] != 0){
 
                     move = (move + 1) % 4;
                 }
