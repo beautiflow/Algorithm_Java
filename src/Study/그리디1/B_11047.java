@@ -1,4 +1,4 @@
-package Study.practice2;
+package Study.그리디1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

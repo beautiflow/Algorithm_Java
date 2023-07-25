@@ -1,4 +1,4 @@
-package Study.practice1;
+package Study.시간복잡도;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
