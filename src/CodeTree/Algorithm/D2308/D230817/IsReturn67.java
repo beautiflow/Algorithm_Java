@@ -1,4 +1,4 @@
-package CodeTree.Algorithm.D230817;
+package CodeTree.Algorithm.D2308.D230817;
 
 public class IsReturn67 {
     public static int f(int n) {

@@ -1,4 +1,4 @@
-package CodeTree.Algorithm.D230805;
+package CodeTree.Algorithm.D2308.D230805;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

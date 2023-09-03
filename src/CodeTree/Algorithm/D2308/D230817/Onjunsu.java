@@ -1,10 +1,10 @@
-package CodeTree.Algorithm.D230810;
+package CodeTree.Algorithm.D2308.D230817;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Game369 {
+public class Onjunsu {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -15,25 +15,25 @@ public class Game369 {
         int count = 0;
 
         for (int i = a; i <= b; i++) {
-            if (numberCheck(i)) {
+            if (onjunCheck(i)) {
                 count++;
             }
         }
         System.out.println(count);
     }
 
-    public static boolean numberCheck(int num) {
-
-        return (num % 3 == 0) || contain(num);
-    }
-
-    public static boolean contain(int num) {
-        while (num > 0) {
-            if (num % 10 == 3 || num % 10 == 6 || num % 10 == 9) {
-                return true;
-            }
-            num /= 10;
+    public static boolean onjunCheck(int i) {
+        if (i % 2 == 0) {
+            return false;
         }
-        return false;
+        else if (i % 10 == 5) {
+            return false;
+        }
+        else if (i % 3 == 0 && i % 9 != 0) {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 }

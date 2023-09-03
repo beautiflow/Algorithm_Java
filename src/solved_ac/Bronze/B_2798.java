@@ -38,8 +38,6 @@ public class B_2798 {
 //                        System.out.println("card[i]  card[j]  card[k]" + card[i] +" " + card[j]+" " + card[k]);
 //                        System.out.println("max = "+max);
                     }
-
-
                 }
             }
         }

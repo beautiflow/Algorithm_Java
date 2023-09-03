@@ -1,8 +1,4 @@
-package CodeTree.Algorithm.D230817;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.StringReader;
+package CodeTree.Algorithm.D2308.D230817;
 
 public class IsReturn18 {
     static int[] p = new int[]{1, 3, 7, 8, 4, 3, 5, 2, 9, 2};
