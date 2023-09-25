@@ -48,9 +48,6 @@ public class B_13300_2 {
                 gCnt += girls[i]/K + 1;
             }
         }
-
         System.out.println(bCnt+gCnt);
-
-
     }
 }
