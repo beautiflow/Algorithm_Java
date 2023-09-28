@@ -1,18 +1,21 @@
 package leetCode;
 
-public class ContainsDuplicate {
-        public boolean containsDuplicate(int[] nums) {
-            int[] arr = new int[nums.length];
+import java.util.HashSet;
+import java.util.Set;
 
-            for(int i = 0; i < nums.length; i++){
-                arr[i] = nums[i];
-                if(nums[i] == arr[i]){
-                    return true;
-                }
-                else{
-                    return false;
-                }
-            }
+public class ContainsDuplicate {
+    public boolean containsDuplicate(int[] nums) {
+
+        Set<Integer> hashSet = new HashSet<>();
+        for (int i = 0; i < nums.length; i++) {
+            hashSet.add(nums[i]);
         }
+
+        if (hashSet.size() == nums.length) {
+            return false;
+        }
+        return true;
+
     }
+}
 
