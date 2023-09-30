@@ -9,7 +9,7 @@ public class Best_Time_to_Buy_and_Sell_Stock {
     }
     public static int maxProfit(int[] prices) {
         int profitMin = Integer.MAX_VALUE;
-        int profitMax = Integer.MIN_VALUE;
+        int profitMax = 0;
 
         for(int i = 0; i < prices.length; i++) {
             if (prices[i] < profitMin) {
@@ -17,11 +17,6 @@ public class Best_Time_to_Buy_and_Sell_Stock {
             }
             profitMax = Math.max(profitMax, prices[i] - profitMin);
         }
-        if(profitMax > 0){
-            return profitMax;
-        }
-        else {
-            return 0;
-        }
+        return profitMax;
     }
 }
