@@ -14,33 +14,39 @@ public class Vaild_Parentheses {
     }
 
     public static boolean isVaild(String s) {
-        class Solution {
-            public boolean isVaild(String s) {
-                Stack<Character> st = new Stack<>();
-
-                for (int i = 0; i < s.length(); i++) {
-                    char ch = s.charAt(i);
-
-                    if (st.peek() == '(' && ch == ')') {
-                        st.pop();
-                    }
-                    if (st.peek() == '{' && ch == '}') {
-                        st.pop();
-                    }
-                    if (st.peek() == '[' && ch == ']') {
-                        st.pop();
-                    } else {
-                        st.push(ch);
-                    }
-                }
-
-
+            if (s.length() % 2 == 1) {
+                return false;
             }
-        }
-        if (st.isEmpty()) {
-            return true;
-        } else {
-            return false;
+            Stack<Character> stack = new Stack<>();
+
+            for (int i = 0; i < s.length(); i++) {
+                char ch = s.charAt(i);
+
+                if (ch == '(' || ch == '{' || ch == '[') {
+                    stack.push(ch);
+                }
+                switch (ch) {
+                    case ')':
+                        if (stack.empty() || stack.peek() != '(') {
+                            return false;
+                        }
+                        else {stack.pop();}
+                        break;
+                    case '}':
+                        if (stack.empty() || stack.peek() != '{') {
+                            return false;
+                        }
+                        else {stack.pop();}
+                        break;
+                    case ']':
+                        if (stack.empty() || stack.peek() != '[') {
+                            return false;
+                        }
+                        else {stack.pop();}
+                        break;
+                }
+            }
+            return stack.empty();
         }
     }
-}
+
