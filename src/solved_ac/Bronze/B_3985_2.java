@@ -11,7 +11,7 @@ public class B_3985_2 {
 
         int L = Integer.parseInt(br.readLine()); // 길이
         int N = Integer.parseInt(br.readLine()); // 명
-        int[] lolCake = new int[L];
+        int[] lolCake = new int[L+1];
         int expected = 0; // 가장 많이 받을 케익 수
         int now = 0; // 현재 많이 받을 케익 수
         int current = 0; // 많이 받을 것이라 예상되는 번째 수
