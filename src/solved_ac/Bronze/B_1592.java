@@ -20,7 +20,6 @@ public class B_1592 {
 
         while (true) {
             if(friends[index] == M){ // 한사람당 받는 횟수가 M 일 경우 게임 끝
-                System.out.println("friends[index] = " + friends[index]);
                 break;
             }
 
@@ -30,8 +29,6 @@ public class B_1592 {
                     index = index%N;
                 }
                 friends[index]++;
-                System.out.println("index = " + index);
-                System.out.println("friends["+index+"] = " + friends[index]);
 
             }
             else { // 받는 횟수가 짝수인 경우 반시계방향으로
@@ -40,14 +37,11 @@ public class B_1592 {
                     index = index+N;
                 }
                 friends[index]++;
-                System.out.println("index = " + index);
-                System.out.println("friends["+index+"] = " + friends[index]);
 
             }
             throwBall++;
-            System.out.println("throwBall = " + throwBall);
         }
-        System.out.println("throwBall = " + throwBall);
+        System.out.println(throwBall);
 
     }
 }
