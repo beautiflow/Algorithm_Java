@@ -11,16 +11,16 @@ public class B_1120 {
 
         String A = st.nextToken();
         String B = st.nextToken();
-        int answer = A.length();
+        int answer = 50;
 
-        for(int i = 0; i < B.length() - A.length(); i++){
+        for(int i = 0; i <= B.length() - A.length(); i++){
             int count = 0;
             for(int j = 0; j < A.length(); j++){
-                if(A.charAt(j) != B.charAt(j+1)){
+                if(A.charAt(j) != B.charAt(j+i)){
                     count++;
                 }
             }
-            answer = Math.min(count, answer);
+            answer = Math.min(answer, count);
         }
         System.out.println(answer);
 
