@@ -3,30 +3,26 @@ package Inflearn.ch01;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class CeninWord {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
         String str = br.readLine();
+        String answer = "";
 
-        StringBuilder sb = new StringBuilder();
+        StringTokenizer st =  new StringTokenizer(str, " ");
 
-        int count = 0;
-        int max = Integer.MIN_VALUE;
-
-        for(int i = 0; i < str.length(); i++){
-            if(str == null || str.trim().isEmpty()){
-                count = 0;
-                sb.setLength(0);
-                continue;
-            }
-            else{
-                count++;
-                max = Math.max(max, count);
-                sb.append(str.charAt(i));
+        while (st.hasMoreTokens()){
+            String word = st.nextToken();
+            if(word.length() > answer.length()){
+                answer = word;
             }
         }
-        System.out.println(max);
+
+        System.out.println(answer);
+
     }
 
 }
