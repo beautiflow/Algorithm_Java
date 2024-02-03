@@ -11,35 +11,31 @@ public class Product_of_Array_Except_Self {
         System.out.println(Arrays.toString(result));
     }
 
-    public static int[] productExceptSelf(int[] nums){
+    public static int[] productExceptSelf(int[] nums) {
         Queue<Integer> list = new LinkedList<>();
-        Queue<Integer> subList = new LinkedList<>();
-        int count = 0;
         int[] totalNum = new int[nums.length];
-
-        for(int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             list.offer(nums[i]);
         }
 
-        for(int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             list.offer(list.poll());
             int multi = 1;
-            while (list.size()-1 >= count) {
+            int count = 1;
+            int count2 = 0;
+            while (list.size() - 1 >= count) {
                 int sub = list.poll();
                 multi *= sub;
                 list.offer(sub);
                 count++;
             }
+            while (list.size() - (list.size() - 1) > count2) {
+                list.offer(list.poll());
+                count2++;
+            }
             totalNum[i] = multi;
-
-            System.out.println("list = " + list);
-            System.out.println("totalNum = " +Arrays.toString(totalNum));
-
-
         }
-
         return totalNum;
-
-        }
     }
+}
 
