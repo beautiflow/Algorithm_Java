@@ -11,22 +11,28 @@ public class Main11 {
 
         String str = br.readLine();
 
-        char temp = 0;
+        str = str + " ";
         String answer = "";
-        int count = 0;
+        int count = 1;
 
         for (int i = 0; i < str.length()-1; i++) {
             // 전의 문자와 현재 문자랑 같은 경우
-            if(temp == str.charAt(i)){
+            if(str.charAt(i) == str.charAt(i+1)){
                 count++;
-                continue;
             }
 
             // 전의 문자와 현재 문자랑 다른 경우
+            else {
+                answer += str.charAt(i);
+                if(count > 1){
+                    answer += String.valueOf(count);
+                    count = 1;
 
-
+                }
+            }
         }
 
+        System.out.printf(answer);
 
     }
 }
